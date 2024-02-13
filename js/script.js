@@ -64,9 +64,11 @@ function showObj (obj){
         let text = "";
 
         for (let key in eachCard) {
-
-            text += `${key}: ${eachCard[key]} `;
-
+            if (key === "foto") {
+                text += `${key}: ${eachCard[key]} `;
+            } else {
+                text += `${key}: ${eachCard[key]}/ `;
+            }
         }
 
         resultElement.innerHTML += `<li>${text}</li>`;
