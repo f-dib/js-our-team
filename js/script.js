@@ -62,17 +62,20 @@ function showObj (obj){
         
         const eachCard = obj[i];
         let photo = "";
-        let text = "";
+        let name = "";
+        let role = "";
 
         for (let key in eachCard) {
             if (key === "foto") {
                 photo += `<img src="./img/${eachCard[key]}">`;
+            } else if (key === "nome") {
+                name += `${key}: ${eachCard[key]}`;
             } else {
-                text += `${key}: ${eachCard[key]}/ `;
+                role += `${key}: ${eachCard[key]}`;
             }
         }
 
-        resultElement.innerHTML += `<li><div>${photo}</div><div>${text}</div></li>`;
+        resultElement.innerHTML += `<div class="col-4"><div>${photo}</div><div>${name}</div><div>${role}</div></div>`;
 
     }
 
