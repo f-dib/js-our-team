@@ -57,13 +57,19 @@ showObj (team);
 
 function showObj (obj){
 
+
     for (let i = 0; i < obj.length; i++) {
         
         const eachCard = obj[i];
+        let text = "";
 
         for (let key in eachCard) {
-            console.log(`${key}: ${eachCard[key]}`);
+
+            text += `${key}: ${eachCard[key]} `;
+
         }
+
+        resultElement.innerHTML += `<li>${text}</li>`;
 
     }
 
