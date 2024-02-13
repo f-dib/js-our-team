@@ -77,7 +77,7 @@ function showObj (obj){
         }
 
         // I show the results obtained on the page
-        resultElement.innerHTML += `<div class="col-4 mb-4">       
+        resultElement.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 mb-4">       
                                         <div class="card border-0">
                                             ${photo}
                                             <div class="card-body">
