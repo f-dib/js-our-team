@@ -1,8 +1,20 @@
-ul {
-    list-style-type: none;
-    padding: 0;
+@font-face {
+    font-family: 'lino';
+    src: url('../font/GianottenLTPro-Regular.woff2') format(woff2);
+    font-size: normal;
+    font-weight: normal;
 }
 
-li {
-    border: 1px solid black;
+.font {
+    font-family: 'lino';
+    color: #7d7771;
+}
+
+body {
+    background-color: #f5f5f1;
+    font-family: sans-serif;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 8px black;
 }

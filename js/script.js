@@ -1,6 +1,6 @@
 let resultElement = document.querySelector("#result");
 
-// Creo un oggetto con i dati di tutti i componenti del team
+// I create an object with the data of all team members
 const team = [
 
     {
@@ -35,7 +35,7 @@ const team = [
     }
 ];
 
-// Richiamo funzione e la utilizzo
+// I call up the function and use it
 
 showObj (team);
 
@@ -53,11 +53,11 @@ showObj (team);
 
 
 
-// Creo una funzione che permetta di mostrare a schermo i dati presenti negli oggetti
+// I create a function that allows you to show the data present in the objects on the screen
 
 function showObj (obj){
 
-
+    // I open a loop that takes every single element present in the object and displays it
     for (let i = 0; i < obj.length; i++) {
         
         const eachCard = obj[i];
@@ -65,17 +65,27 @@ function showObj (obj){
         let name = "";
         let role = "";
 
+        // I open a cycle that allows me to sort the data and connect it to the elements on the page 
         for (let key in eachCard) {
             if (key === "foto") {
-                photo += `<img src="./img/${eachCard[key]}">`;
+                photo += `<img class="card-img-top" src="./img/${eachCard[key]}">`;
             } else if (key === "nome") {
-                name += `${key}: ${eachCard[key]}`;
+                name += `<h5 class="font">${eachCard[key]}</h5>`;
             } else {
-                role += `${key}: ${eachCard[key]}`;
+                role += `<div class="font small">${eachCard[key]}</div>`;
             }
         }
 
-        resultElement.innerHTML += `<div class="col-4"><div>${photo}</div><div>${name}</div><div>${role}</div></div>`;
+        // I show the results obtained on the page
+        resultElement.innerHTML += `<div class="col-4 mb-4">       
+                                        <div class="card border-0">
+                                            ${photo}
+                                            <div class="card-body">
+                                                ${name}
+                                                ${role}
+                                            </div>
+                                        </div>
+                                    </div>`;
 
     }
 
